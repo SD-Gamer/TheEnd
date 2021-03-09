@@ -102,6 +102,7 @@ function draw() {
   
     if(obstaclesGroup.isTouching(trex)){
         gameState = LIFE2;
+        obstaclesGroup.destroyEach();
     }
   }
   else if (gameState === END) {
@@ -126,7 +127,6 @@ function draw() {
     }
   }
   else if(gameState === LIFE2){
-          obstaclesGroup.destroyEach();
           spawnObstacles();
           trex.scale = 0.3;
 
